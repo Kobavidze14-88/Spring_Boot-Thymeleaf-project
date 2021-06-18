@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="WorkSpace">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Person List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body class="fadeIn">
+      <h1>Employee Information</h1>
+         <h3>
+            В данном разделе вы видите список сотрудников, для добавления нового сотрудника в список, необходимо перейти на вкладку Add Employee.
+         </h3>
+      <h3><a href="addPerson">Add Employee</a></h3>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Middle Name</th>
+               <th>Email</th>
+               <th>Date of Birth</th>
+               <th>Place of residence</th>
+               <th>Number</th>
+               <th>Position</th>
+            </tr>
+            <tr th:each ="person : ${persons}">
+               <td th:utext="${person.firstName}">...</td>
+               <td th:utext="${person.lastName}">...</td>
+               <td th:utext="${person.middleName}">...</td>
+               <td th:utext="${person.email}">...</td>
+               <td th:utext="${person.dateOfBirth}">...</td>
+               <td th:utext="${person.placeOfResidence}">...</td>
+               <td th:utext="${person.number}">...</td>
+               <td th:utext="${person.position}">...</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

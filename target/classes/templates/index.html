@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="WorkSpace">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Java Thymeleaf project!</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1 align="center" class="fadeIn">Welcome to Java Thymeleaf project!</h1>
+<h2 align="center" class="fadeIn" th:utext="${message}">..!..</h2>
+<h3 class="fadeIn"><a th:href="@{/personList}">Employee Information</a></h3>
+
+</body>
+</html>
